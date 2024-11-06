@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaRocket, FaCoins, FaBolt } from 'react-icons/fa';
 
 const BoostPoints: React.FC = () => {
-  const [totalPoints, setTotalPoints] = useState(0);
-
   const pointOptions = [
     { points: 2000, cost: 0.2, icon: <FaBolt size={24} style={{ color: '#FF4500' }} />, link: 'https://t.me/send?start=IVPqJbt43iaV' },
     { points: 5000, cost: 2, icon: <FaBolt size={24} style={{ color: '#FFD700' }} />, link: 'https://t.me/send?start=IVV6Y78fTWq3' },
@@ -11,9 +9,7 @@ const BoostPoints: React.FC = () => {
     { points: 20000, cost: 5, icon: <FaCoins size={24} style={{ color: '#FF6347' }} />, link: 'https://t.me/send?start=IV9jdjl7BVe7' }
   ];
 
-  const handlePurchase = (points: number, link: string) => {
-    // Simulate points purchase by updating state
-    setTotalPoints(prevPoints => prevPoints + points);
+  const handlePurchase = (link: string) => {
     window.open(link, '_blank');
   };
 
@@ -22,11 +18,10 @@ const BoostPoints: React.FC = () => {
       <h1>Boost Points</h1>
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px', marginTop: '20px' }}>
-        {/* Buy Points Section */}
         {pointOptions.map((option, index) => (
           <button
             key={index}
-            onClick={() => handlePurchase(option.points, option.link)}
+            onClick={() => handlePurchase(option.link)}
             style={{
               display: 'flex',
               alignItems: 'center',
