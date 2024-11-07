@@ -4,9 +4,9 @@ import { FaRocket, FaCoins, FaBolt } from 'react-icons/fa';
 const BoostPoints: React.FC = () => {
   const pointOptions = [
     { points: 2000, cost: 0.2, icon: <FaBolt size={24} style={{ color: '#FF4500' }} />, link: 'https://t.me/send?start=IVPqJbt43iaV' },
-    { points: 5000, cost: 2, icon: <FaBolt size={24} style={{ color: '#FFD700' }} />, link: 'https://t.me/send?start=IVV6Y78fTWq3' },
-    { points: 10000, cost: 2, icon: <FaRocket size={24} style={{ color: '#00BFFF' }} />, link: 'https://t.me/send?start=IV6B17EeVdK7' },
-    { points: 20000, cost: 5, icon: <FaCoins size={24} style={{ color: '#FF6347' }} />, link: 'https://t.me/send?start=IV9jdjl7BVe7' }
+    { points: 5000, cost: 0.5, icon: <FaBolt size={24} style={{ color: '#FFD700' }} />, link: 'https://t.me/send?start=IVXQhfpiH900' },
+    { points: 10000, cost: 1, icon: <FaRocket size={24} style={{ color: '#00BFFF' }} />, link: 'https://t.me/send?start=IVV6Y78fTWq3' },
+    { points: 20000, cost: 2, icon: <FaCoins size={24} style={{ color: '#FF6347' }} />, link: 'https://t.me/send?start=IV9jdjl7BVe7' }
   ];
 
   const handlePurchase = (link: string) => {
