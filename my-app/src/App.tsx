@@ -1,30 +1,34 @@
-// src/App.tsx
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AppRouter from './router';
 
 const App: React.FC = () => {
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
   useEffect(() => {
-    // Set viewport height for dynamic resizing on mobile devices
-    const setViewportHeight = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // Adjust the viewport height for mobile devices
+    const adjustViewportHeight = () => {
+      // Manually adjust for mobile browsers' dynamic viewport height issues
+      setViewportHeight(window.innerHeight);
     };
 
-    setViewportHeight();
-    window.addEventListener('resize', setViewportHeight);
+    adjustViewportHeight(); // Set initial height
 
-    return () => window.removeEventListener('resize', setViewportHeight);
+    window.addEventListener('resize', adjustViewportHeight);
+
+    return () => {
+      window.removeEventListener('resize', adjustViewportHeight);
+    };
   }, []);
 
   return (
     <div
       className="App"
       style={{
-        height: 'calc(var(--vh, 1vh) * 100)',
-        overflow: 'hidden', // Ensures no overflow content
+        height: `${viewportHeight}px`, // Set height dynamically based on the window size
+        overflow: 'hidden', // Ensure no scrolling
         display: 'flex',
         flexDirection: 'column',
-        paddingBottom: '60px', // Adjust for bottom navigation or other fixed elements
+        paddingBottom: '60px', // Adjust for bottom elements like fixed navigation
       }}
     >
       <AppRouter />
