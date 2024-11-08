@@ -1,17 +1,15 @@
-.App {
-  width: 100%;
-  max-width: 100vw;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
 }
 
-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #111;
+a {
+  color: white;
+  text-decoration: none;
 }
 
-.main-content {
-  overflow-y: auto;
-  flex: 1; /* Makes sure content fills available space */
+a:hover {
+  color: lightgray;
 }
