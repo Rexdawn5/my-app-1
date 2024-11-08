@@ -19,7 +19,7 @@ const ReferralSystem: React.FC = () => {
   };
 
   return (
-    <div style={{ color: 'white', textAlign: 'center', padding: '20px' }}>
+    <div style={{ backgroundColor: '#000', color: 'white', textAlign: 'center', padding: '20px', minHeight: '100vh' }}>
       <h1>Invite Friends 🐕‍🦺</h1>
       <p>Share your referral link to invite your friends!</p>
       <button

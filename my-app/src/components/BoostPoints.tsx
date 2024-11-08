@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { FaRocket, FaCoins, FaBolt } from 'react-icons/fa';
 
 const BoostPoints: React.FC = () => {
@@ -14,7 +14,7 @@ const BoostPoints: React.FC = () => {
   };
 
   return (
-    <div style={{ color: 'white', textAlign: 'center', padding: '20px' }}>
+    <div style={{ backgroundColor: '#000', color: 'white', textAlign: 'center', padding: '20px', minHeight: '100vh' }}>
       <h1>Boost Points</h1>
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px', marginTop: '20px' }}>
