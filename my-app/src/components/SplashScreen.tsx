@@ -22,11 +22,11 @@ const SplashScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
       flexDirection: 'column'
     }}>
       <img 
-        src="/public/spacedogsbackground1.png" 
+        src="/spacedogsbackground1.png" 
         alt="Space Dog Logo" 
-        style={{ width: '300px', height: '300px', position: 'absolute', top: '30%' }} // Increased size
+        style={{ width: '300px', height: '300px', position: 'absolute', top: '30%' }} // Adjusted image size
       />
-      <h1 style={{ position: 'absolute', top: '50%' }}></h1>
+      <h1 style={{ position: 'absolute', top: '50%' }}>Welcome to Space Dogs!</h1>
     </div>
   );
 };
