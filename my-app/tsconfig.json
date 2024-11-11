@@ -1,7 +1,16 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowJs": true,
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["components/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

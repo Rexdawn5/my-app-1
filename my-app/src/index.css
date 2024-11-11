@@ -1,16 +1,26 @@
+/* Global styles */
 body {
   margin: 0;
+  padding: 0; /* Added padding reset */
   font-family: Arial, sans-serif;
   background-color: black;
   color: white;
+  line-height: 1.5; /* Added for better readability */
 }
 
+/* Links */
 a {
   color: white;
   text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 a:hover {
   color: lightgray;
 }
 
+/* Optional: Make links stand out more when focused */
+a:focus {
+  outline: 2px solid lightgray;
+  outline-offset: 2px;
+}
